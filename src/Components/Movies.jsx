@@ -16,6 +16,7 @@ function Movies() {
   const Api = `https://api.themoviedb.org/3/${Shown}/movie`
   const Images = 'https://image.tmdb.org/t/p/w500'
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const MovieCall = async () => {
     const data = await axios.get(Api, {
       params: {
@@ -28,10 +29,8 @@ function Movies() {
   }
 
   useEffect(() => {
-    setTimeout(() => {
       MovieCall()
-    }, 100)
-  }, [input])
+  }, [MovieCall,moviesData])
 
   const MoviesTitle = (movie) => {
     setMovieTitle(movie.title)

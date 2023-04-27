@@ -8,6 +8,7 @@ function TrailerTvShows({ TvShowsTitle, toggle }) {
     const [video, setVideo] = useState("");
     const [videoURL, setVideoURL] = useState("");
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     function handleSearch() {
         setVideo(TvShowsTitle)
         movieTrailer(video).then((res) => {

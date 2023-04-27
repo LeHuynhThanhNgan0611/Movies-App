@@ -8,6 +8,7 @@ function TrailerTrending({ trendTitle, toggle }) {
     const [video, setVideo] = useState("");
     const [videoURL, setVideoURL] = useState("");
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     function handleSearch() {
         setVideo(trendTitle)
         movieTrailer(video).then((res) => {
